@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Pretvornik</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <h1>Pretvornik enot</h1>
+  <p> Vnesi število in izberi svojo možnost</p>
+  <form class="" method="post">
+    <input type="number" name="vnos" />
+    <button type="submit" name="button_cm" >Pretvori v cm</button>
+    <button type="submit" name="button_inch" >Pretvori v inch</button>
+  </form>
+  {{rezultat}}
+
+  <h1>Druga možnost:</h1>
+
+  <form class="" method="post">
+    <p>Pretvornik iz cm v inče in obratno.</p>
+    <p>V katero enoto želiš pretvoriti?
+
+
+    <select name="enota">
+      <option value="cm">CM</option>
+      <option value="inch">INCH</option>
+    </select>
+    </p>
+    Vpiši vrednost:
+    <input type="number" name="vnos_drugi" />
+    <button type="submit" name="button_drugi">Pretvori</button>
+  </form>
+<br>
+<br>
+<h1>{{rezultat_drugi}}</h1>
+
+</body>
+</html>
