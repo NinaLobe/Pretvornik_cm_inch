@@ -32,12 +32,14 @@ class MainHandler(BaseHandler):
         return self.render_template("pretvornik.html")
     def post(self):
         vnos = self.request.get("vnos")
-        rezultat = vnos
+        #rezultat = vnos
+        method = self.request.get("button")
         rezultat_drugi = ""
-        #if "button_cm" in self:
-         #   rezultat = 2*int(vnos)
-        #elif "button_inch" in self:
-         #   rezultat = int(vnos)*3
+        if method == "cm":
+            rezultat= str(vnos) + " inch = " + str(float(vnos)*2.54) + " cm"
+        elif method == "inch":
+            rezultat = str(vnos) + " cm =" + str(float(vnos) * 0.393700787) + " inch"
+
 #DRUGI DEL
         vnos_drugi = self.request.get("vnos_drugi")
         enota = self.request.get("enota")
